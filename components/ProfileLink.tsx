@@ -12,6 +12,7 @@ function ProfileLink({ user }: { user: User }) {
 
   const href = `/dashboard/${user.username}`;
   const isActive = pathname === href;
+
   return (
     <Link
       href={href}
@@ -25,6 +26,7 @@ function ProfileLink({ user }: { user: User }) {
         user={user}
         className={`h-6 w-6 ${isActive && 'border-2 border-white'}`}
       />
+
       <p
         className={`${cn('hidden lg:block', {
           'font-extrabold': isActive,
